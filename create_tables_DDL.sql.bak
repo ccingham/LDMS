@@ -4,7 +4,7 @@
 --
 -- 15 March 2024
 -- Chris Ingham
--- File: create_tables_DDL.sql 
+-- File: create_tables_DDL.sql
 ----------------------------------------------------------------------
 
 CREATE TABLE DEPARTMENTS ( department_id       NUMBER(5) NOT NULL,

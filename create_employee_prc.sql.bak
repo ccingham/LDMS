@@ -58,4 +58,3 @@ EXCEPTION
         p_error_message := SUBSTR(SQLERRM,1,100);
 
 END create_employee;
-/
