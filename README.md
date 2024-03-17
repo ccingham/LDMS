@@ -15,7 +15,7 @@ As a user with permisions to create tables, procudures and functions, and read, 
 
 1. create_tables_DDL.sql. This creates two tables as specified in the requirement with primary key and foreign key constraints.
 2. insert_records_DML.sql. This populates the tables as specified in the requirement. Note this script does not include a commit. 
-   User should execute a commit after the scrip has run succesfully (or rollback if not. See DBMS_OUTPUT from script.
+   User should execute a commit after the script has run succesfully 
    
 3. The following scripts create proedures and functions. They can be run in any order.
    Comments in the scripts describe the parameters and results.
@@ -28,12 +28,13 @@ return_salary_fnc.sql
 employee_report_prc.sql
 salary_report_fnc.sql
 
-4. The following unit test scripts make calls to the above, demonstrating that they function as intended.
-   Comments in the scripts list the acceptance criteria I have tested against.
+4. the file unt_tests.sql tests that the above function as intended. this is a script that will:
+   create a new employee record. return an error message if invlaid manager id is used.
+   change salary. return an error message if invalid employee id is used.
+   transfer an employee to a diferent department. returns an error is invalid employee or dept id is used, or if the employee is already in the dept.
+   returns the salary of an employee. returns null if invalid employee id. 
+   returns the salary of an employee. returns null if invalid employee id.
+   lists employees by department. nothing listed if invalid dept id.
+   returns the total salary for a department.
    
-   create_employee_test.sql
-   change_salary_test.sql
-   change_department_test.sql
-   return_salary_test.sql
-   emp_by_dept_test.sql
-   salary_total_dept_test.sql
+   
